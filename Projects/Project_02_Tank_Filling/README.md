@@ -1,9 +1,10 @@
 # Project 02 - Tank Filling
 
 ![TIA Portal](https://img.shields.io/badge/TIA%20Portal-V16-blue)
-![Factory I/O](https://img.shields.io/badge/Factory%20I%2FO-2.5-orange)
-![S7-1200](https://img.shields.io/badge/PLC-S7--1200-green)
+![Factory I/O](https://img.shields.io/badge/Factory%20I%2FO-2.5.6-green)
+![S7-1200](https://img.shields.io/badge/PLC-S7--1200-orange)
 ![Status](https://img.shields.io/badge/Status-In%20Progress-yellow)
+
 
 ## Overview
 
