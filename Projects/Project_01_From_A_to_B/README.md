@@ -9,7 +9,7 @@ Basic conveyor control using Siemens TIA Portal, Factory I/O and PLCSIM.
 
 Developed a basic conveyor control system using **Siemens TIA Portal V16**, **S7-PLCSIM**, and **Factory I/O**.
 
-The conveyor transports a box until it reaches a photoelectric sensor, where the conveyor automatically stops.
+The conveyor transports a box until it blocks the photoelectric sensor, causing the conveyor motor to stop.
 
 This project demonstrates the implementation of a classic **Start/Stop seal-in circuit (self-holding circuit)** together with Factory I/O simulation.
 
@@ -72,11 +72,17 @@ Runs the conveyor while the Run_Command is active and the photo sensor beam is c
 ```
 Project_01_From_A_to_B
 │
-├── Docs/
-├── FactoryIO/
-├── Images/
-├── TIA/
-├── Videos/
+├── FactoryIO
+│   ├── From_A_to_B.factoryio
+│   └── driver_config.png
+│
+├── Images
+│   ├── scene.png
+│   ├── ladder.png
+│   ├── plc_tags.png
+│   ├── factoryio_driver.png
+│   └── ...
+│
 └── README.md
 ```
 
@@ -100,9 +106,10 @@ Project_01_From_A_to_B
 
 ## Demonstration
 
-Click the image below to watch the project demonstration.
+The demonstration video, archived TIA Portal project (.zap16), and Factory I/O scene are available in the GitHub Release.
 
-[![Project 01 Demo](Images/scene.png)](Videos/Project01.mp4)
+▶ [Project 01 Release](https://github.com/nienyuwu/TIA-Portal-Portfolio/releases/tag/Project01-v1.0)
+
 
 ---
 
@@ -116,24 +123,24 @@ Click the image below to watch the project demonstration.
   - FALSE = Pressed
 - A **seal-in (self-holding)** circuit was implemented using internal memory bit **%M0.0**.
 - The official Factory I/O Siemens template simplifies communication with S7-PLCSIM.
-- TIA Portal projects can be shared conveniently using **.zap16** archived projects.
+- TIA Portal projects can be conveniently distributed using **.zap16** archived projects.
 
 ---
 
 ## PLC Concepts
 
+- PLC Programming
+- Ladder Logic (LAD)
 - Digital Inputs
 - Digital Outputs
-- Internal Memory Bits
 - Normally Open Contacts
 - Normally Closed Contacts
+- Internal Memory Bits (M Area)
 - Seal-in (Self-holding) Circuit
 - Photoelectric Sensors
 - Conveyor Control
 - PLC Simulation
 - Industrial Automation
-- PLC Programming
-- Ladder Logic (LAD)
 
 ---
 
@@ -142,3 +149,5 @@ Click the image below to watch the project demonstration.
 Created by **Nien-Yu Wu**
 
 Automation Engineering Portfolio
+
+GitHub: <https://github.com/nienyuwu>
