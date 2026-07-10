@@ -1,9 +1,9 @@
 # Project 01 - From A to B
-![TIA Portal](https://img.shields.io/badge/TIA%20Portal-V16-blue)
+![TIA Portal](https://img.shields.io/badge/TIA%20Portal-V16-blue) ![Factory IO](https://img.shields.io/badge/Factory%20IO-2.5.6-green) ![PLC](https://img.shields.io/badge/PLC-S7--1200-orange)
 
-![Factory IO](https://img.shields.io/badge/Factory%20IO-2.5.6-green)
+![Scene](Images/scene.png)
 
-![PLC](https://img.shields.io/badge/PLC-S7--1200-orange)
+Basic conveyor control using Siemens TIA Portal, Factory I/O and PLCSIM.
 
 ## Overview
 
@@ -17,8 +17,7 @@ This project demonstrates the implementation of a classic **Start/Stop seal-in c
 
 ## Features
 
-- Start Button
-- Stop Button
+- Start/Stop Pushbutton Control
 - Seal-in (Self-holding) Circuit
 - Conveyor Motor Control
 - Photoelectric Sensor Detection
@@ -45,24 +44,26 @@ This project demonstrates the implementation of a classic **Start/Stop seal-in c
 
 ## I/O Mapping
 
-| Signal | Address |
-|---------|---------|
-| Photo Sensor | %I0.0 |
-| Factory Running | %I0.1 |
-| Start Button | %I0.2 |
-| Stop Button | %I0.3 |
-| Conveyor Motor | %Q0.0 |
-| Run Command | %M0.0 |
+| Tag | Address | Description |
+|------|---------|-------------|
+| Photo_Sensor | %I0.0 | Photoelectric Sensor |
+| Factory_Running | %I0.1 | Factory I/O Running Status |
+| Start_Button | %I0.2 | Start Pushbutton |
+| Stop_Button | %I0.3 | Stop Pushbutton |
+| Conveyor_Motor | %Q0.0 | Conveyor Output |
+| Run_Command | %M0.0 | Internal Seal-in Bit |
 
 ---
 
 ## Ladder Logic
 
-### Network 1
-Start / Stop Seal-in Circuit
+### Network 1 — Start / Stop Seal-in Circuit
 
-### Network 2
-Conveyor Motor Control
+Implements a self-holding (seal-in) circuit using memory bit **%M0.0**.
+
+### Network 2 — Conveyor Motor Control
+
+Runs the conveyor while the Run_Command is active and the photo sensor beam is clear.
 
 ---
 
@@ -74,18 +75,14 @@ Project_01_From_A_to_B
 ├── Docs/
 ├── FactoryIO/
 ├── Images/
-├── Videos/
 ├── TIA/
+├── Videos/
 └── README.md
 ```
 
 ---
 
 ## Screenshots
-
-### Factory I/O Scene
-
-![Scene](Images/scene.png)
 
 ### Ladder Logic
 
@@ -103,9 +100,9 @@ Project_01_From_A_to_B
 
 ## Demonstration
 
-Demo video:
+Click the image below to watch the project demonstration.
 
-`Videos/Project01.mp4`
+[![Project 01 Demo](Images/scene.png)](Videos/Project01.mp4)
 
 ---
 
@@ -134,6 +131,9 @@ Demo video:
 - Photoelectric Sensors
 - Conveyor Control
 - PLC Simulation
+- Industrial Automation
+- PLC Programming
+- Ladder Logic (LAD)
 
 ---
 
