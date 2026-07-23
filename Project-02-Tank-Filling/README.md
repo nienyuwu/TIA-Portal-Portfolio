@@ -104,17 +104,17 @@ Converts digital commands into analog valve outputs.
 ## Project Structure
 
 ```text
-Project_02_Tank_Filling
+Project-02-Tank-Filling
 │
 ├── FactoryIO
-│   ├── Tank_Filling.factoryio
-│   └── driver_config.png
+│   ├── Tank-Filling.factoryio
+│   └── driver-config.png
 │
 ├── Images
 │   ├── scene.png
 │   ├── ladder.png
-│   ├── plc_tags.png
-│   ├── factoryio_driver.png
+│   ├── plc-tags.png
+│   ├── factoryio-driver.png
 │   └── ...
 │
 └── README.md
@@ -130,11 +130,11 @@ Project_02_Tank_Filling
 
 ### PLC Tags
 
-![PLC Tags](Images/plc_tags.png)
+![PLC Tags](Images/plc-tags.png)
 
 ### Factory I/O Driver Configuration
 
-![Driver](Images/factoryio_driver.png)
+![Driver](Images/factoryio-driver.png)
 
 ---
 

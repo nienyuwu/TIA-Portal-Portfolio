@@ -70,17 +70,17 @@ Runs the conveyor while the Run_Command is active and the photo sensor beam is c
 ## Project Structure
 
 ```
-Project_01_From_A_to_B
+Project-01-From-A-to-B
 │
 ├── FactoryIO
-│   ├── From_A_to_B.factoryio
-│   └── driver_config.png
+│   ├── From-A-to-B.factoryio
+│   └── driver-config.png
 │
 ├── Images
 │   ├── scene.png
 │   ├── ladder.png
-│   ├── plc_tags.png
-│   ├── factoryio_driver.png
+│   ├── plc-tags.png
+│   ├── factoryio-driver.png
 │   └── ...
 │
 └── README.md
@@ -96,11 +96,11 @@ Project_01_From_A_to_B
 
 ### PLC Tags
 
-![PLC Tags](Images/plc_tags.png)
+![PLC Tags](Images/plc-tags.png)
 
 ### Factory I/O Driver Configuration
 
-![Driver](Images/factoryio_driver.png)
+![Driver](Images/factoryio-driver.png)
 
 ---
 
