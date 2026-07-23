@@ -142,7 +142,7 @@ Project-02-Tank-Filling
 
 The demonstration video, archived TIA Portal project (.zap16), and Factory I/O scene are available in the GitHub Release.
 
-▶ [Project 02 Release](https://github.com/nienyuwu/TIA-Portal-Portfolio/releases/tag/project-02-v1.0.0)
+▶ [Project 02 Release](https://github.com/nienyuwu/TIA-Portal-Portfolio/releases/tag/Project-02-v1.0.0)
 
 
 ---
