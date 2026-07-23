@@ -96,11 +96,11 @@ Project_01_From_A_to_B
 
 ### PLC Tags
 
-![PLC Tags](Images/plc_tags.png)
+![PLC Tags](Images/plc-tags.png)
 
 ### Factory I/O Driver Configuration
 
-![Driver](Images/factoryio_driver.png)
+![Driver](Images/factoryio-driver.png)
 
 ---
 
