@@ -16,7 +16,7 @@ Developed an automatic tank filling system using **Siemens TIA Portal V16**, **S
 
 The PLC automatically fills and discharges an analog tank by monitoring the tank level, controlling analog valves, and managing the filling sequence with timers.
 
-This project demonstrates analog signal processing, automatic sequence control, manual override, and analog output control using Ladder Logic.
+This project demonstrates analog signal processing, automatic sequence control, manual override, analog output control, and a layered PLC software architecture using Ladder Logic.
 
 ---
 
@@ -75,29 +75,16 @@ This project demonstrates analog signal processing, automatic sequence control, 
 
 ## Ladder Logic
 
-### Network 1 — Analog Signal Processing
+The PLC program is organized into several functional modules to improve readability, scalability, and maintenance.
 
-Converts analog tank level into digital fill and discharge states.
-
-### Network 2 — Machine Enable
-
-Implements Start / Stop control and machine enable logic.
-
-### Network 3 — Manual Operation
-
-Processes manual fill and discharge requests.
-
-### Network 4 — Automatic Sequence
-
-Controls automatic filling and discharge using TON timers and state transitions.
-
-### Network 5 — Command Merge
-
-Combines manual and automatic commands with manual priority.
-
-### Network 6 — Analog Output Control
-
-Converts digital commands into analog valve outputs.
+| Module | Function |
+|--------|----------|
+| Signal Processing | Converts analog tank level into digital control states |
+| Machine Enable | Start / Stop and machine enable logic |
+| Manual Control | Processes manual fill and discharge requests |
+| Automatic Sequence | Controls automatic filling and discharge cycles |
+| Command Merge | Combines manual and automatic commands with manual priority |
+| Output Conversion | Converts digital commands into analog valve outputs |
 
 ---
 
@@ -112,8 +99,11 @@ Project-02-Tank-Filling
 │
 ├── Images
 │   ├── scene.png
-│   ├── ladder.png
-│   ├── plc-tags.png
+│   ├── architecture.drawio
+│   ├── architecture.svg
+│   ├── plc-input-tags.png
+│   ├── plc-internal-tags.png
+│   ├── plc-output-tags.png
 │   ├── factoryio-driver.png
 │   └── ...
 │
@@ -124,13 +114,23 @@ Project-02-Tank-Filling
 
 ## Screenshots
 
-### Ladder Logic
+### Layered PLC Architecture
 
-![Ladder](Images/ladder.png)
+![Architecture](Images/architecture.svg)
 
 ### PLC Tags
 
-![PLC Tags](Images/plc-tags.png)
+#### Input Tags
+
+![PLC Inputs](Images/plc-input-tags.png)
+
+#### Internal Tags
+
+![PLC Internal Tags](Images/plc-internal-tags.png)
+
+#### Output Tags
+
+![PLC Outputs](Images/plc-output-tags.png)
 
 ### Factory I/O Driver Configuration
 
@@ -140,18 +140,22 @@ Project-02-Tank-Filling
 
 ## Demonstration
 
-The demonstration video, archived TIA Portal project (.zap16), and Factory I/O scene will be available in the GitHub Release.
+The demonstration video, archived TIA Portal project (.zap16), and Factory I/O scene are available in the GitHub Release.
+
+▶ [Project 02 Release](https://github.com/nienyuwu/TIA-Portal-Portfolio/releases/tag/project-02-v1.0.0)
+
 
 ---
 
 ## Lessons Learned
 
-- Factory I/O Analog Tank uses REAL values from **0.0 to 10.0**.
-- Analog valves accept REAL values from **0.0 (closed)** to **10.0 (fully open)**.
-- Analog signals can be converted into digital states for sequence control.
-- Automatic filling and discharge can be implemented using state-based logic and TON timers.
-- Manual commands can safely override automatic control through command merging.
-- Separating signal processing, sequence control, and output control simplifies PLC program design.
+- Factory I/O Analog Tank uses **REAL values ranging from 0.0 to 10.0**.
+- Analog valves are controlled using **REAL output values between 0.0 (closed) and 10.0 (fully open)**.
+- Analog signals can be converted into digital states for reliable sequence control.
+- Automatic filling and discharge can be implemented using state-based logic together with TON timers.
+- Manual commands can safely override automatic sequences through command merging.
+- Separating signal processing, control logic, and output conversion improves PLC program readability and maintainability.
+- A layered PLC architecture makes the control program easier to understand, maintain, and extend.
 
 ---
 

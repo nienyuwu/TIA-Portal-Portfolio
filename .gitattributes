@@ -1,0 +1,9 @@
+# Normalize text files
+* text=auto
+
+# Use LF for source and documentation
+*.md      text eol=lf
+*.svg     text eol=lf
+*.drawio  text eol=lf
+*.xml     text eol=lf
+*.txt     text eol=lf

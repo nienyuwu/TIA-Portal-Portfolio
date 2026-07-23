@@ -108,7 +108,7 @@ Project-01-From-A-to-B
 
 The demonstration video, archived TIA Portal project (.zap16), and Factory I/O scene are available in the GitHub Release.
 
-▶ [Project 01 Release](https://github.com/nienyuwu/TIA-Portal-Portfolio/releases/tag/Project01-v1.0)
+▶ [Project 01 Release](https://github.com/nienyuwu/TIA-Portal-Portfolio/releases/tag/project-01-v1.0.0)
 
 
 ---
